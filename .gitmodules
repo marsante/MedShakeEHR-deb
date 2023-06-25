@@ -1,3 +1,4 @@
 [submodule "medshakeehr/usr/share/medshakeehr"]
 	path = medshakeehr/usr/share/medshakeehr
 	url = https://github.com/MedShake/MedShakeEHR-base.git
+	branch = master

@@ -1,0 +1,14 @@
+Package: medshakeehr
+Version: 8.0.0
+Architecture: all
+Maintainer: Michaël Val <contact@brunoy-osteopathe.fr>
+Depends: apache2 | httpd, libapache2-mod-php | php, ca-certificates, default-mysql-client | virtual-mysql-client, default-mysql-server | virtual-mysql-server, composer, curl, ghostscript, git, imagemagick, pdftk-java, php-bcmath, php-gd, php-intl, php-curl, php-zip, php-xml, php-imagick, php-imap, php-mysql | php-mysqlnd, php-soap, php-yaml, php-gnupg 
+Recommends:
+Suggests: orthanc
+Section: web
+Priority: optional
+Homepage: https://github.com/MedShake/MedShakeEHR-base
+Description: electronic health record
+ MedShakeEHR supported :
+    * Modules
+    * Plugins

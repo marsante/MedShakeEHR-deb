@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+
+a2enmod rewrite
+
+service apache2 restart
+
+mkdir /var/www/medshakeehr
+
+cp -r /usr/share/medshakeehr/ /var/www/
+
+cd /var/www/medshakeehr/public_html
+echo "SetEnv MEDSHAKEEHRPATH /var/www/medshakeehr/" | cat - .htaccess > .htaccess_tmp && mv .htaccess_tmp .htaccess
+
+chown -R www-data:www-data /var/www/medshakeehr
+
+cd /var/www/medshakeehr
+su www-data -s/bin/bash -c 'composer install --no-interaction -o --no-cache' 
+
+cd /var/www/medshakeehr/public_html
+su www-data -s/bin/bash -c 'composer install --no-interaction -o --no-cache' 
+
+
+
+
+
+
+
+
+
+
+
